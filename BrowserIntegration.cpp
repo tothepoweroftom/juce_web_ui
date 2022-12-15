@@ -1,12 +1,11 @@
-namespace tomduncalf
+namespace webui
 {
 namespace BrowserIntegration
 {
-    BrowserIntegration::BrowserIntegration (BrowserComponent& b): browser (b)
+    BrowserIntegration::BrowserIntegration (BrowserComponent& b) : browser (b)
     {
-        browser.setOnMessageCallback ([this] (juce::var message) {
-            handleMessage (message);
-        });
+        browser.setOnMessageCallback ([this] (juce::var message)
+                                      { handleMessage (message); });
     }
 
     void BrowserIntegration::registerBrowserCallback (juce::String name, BrowserCallback callback)
@@ -45,8 +44,8 @@ namespace BrowserIntegration
             return;
         }
 
-        for (auto& callback: callbacks->second)
+        for (auto& callback : callbacks->second)
             callback (message.getProperty ("data", juce::var()));
     }
-}// namespace BrowserIntegration
-}// namespace tomduncalf
+} // namespace BrowserIntegration
+} // namespace webui

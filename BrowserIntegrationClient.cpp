@@ -1,4 +1,4 @@
-namespace tomduncalf
+namespace webui
 {
 namespace BrowserIntegration
 {
@@ -16,4 +16,4 @@ namespace BrowserIntegration
         browserIntegration.sendEventToBrowser (clientName + "::" + eventType, data, suppressLog);
     }
 }// namespace BrowserIntegration
-}// namespace tomduncalf
+}// namespace webui

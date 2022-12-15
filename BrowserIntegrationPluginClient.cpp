@@ -1,6 +1,6 @@
 #pragma once
 
-namespace tomduncalf
+namespace webui
 {
 namespace BrowserIntegration
 {

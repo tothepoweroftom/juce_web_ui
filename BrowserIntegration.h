@@ -8,7 +8,7 @@
  */
 #pragma once
 
-namespace tomduncalf
+namespace webui
 {
 namespace BrowserIntegration
 {
@@ -30,4 +30,4 @@ namespace BrowserIntegration
         BrowserComponent& browser;
     };
 }// namespace BrowserIntegration
-}// namespace tomduncalf
+}// namespace webui

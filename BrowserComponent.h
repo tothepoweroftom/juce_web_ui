@@ -5,11 +5,11 @@
  */
 #pragma once
 
-namespace tomduncalf
+namespace webui
 {
 namespace BrowserIntegration
 {
-    class BrowserComponent : public juce::WindowsWebView2WebBrowserComponent
+    class BrowserComponent : public juce::WebBrowserComponent
     {
     public:
         /** Create a browser component with the default URL (in debug mode, loading
@@ -37,4 +37,4 @@ namespace BrowserIntegration
         void scriptMessageReceived (const juce::var messageBody) override;
     };
 }// namespace BrowserIntegration
-}// namespace tomduncalf
+}// namespace webui

@@ -1,13 +1,13 @@
-namespace tomduncalf
+namespace webui
 {
 namespace BrowserIntegration
 {
-    BrowserComponent::BrowserComponent(): juce::WindowsWebView2WebBrowserComponent (false)
+    BrowserComponent::BrowserComponent() : juce::WebBrowserComponent()
     {
         loadUI();
     }
 
-    BrowserComponent::BrowserComponent (juce::String initialUrl): juce::WindowsWebView2WebBrowserComponent (false)
+    BrowserComponent::BrowserComponent (juce::String initialUrl) : juce::WebBrowserComponent ()
     {
         goToURL (initialUrl);
     }
@@ -83,7 +83,8 @@ namespace BrowserIntegration
 
     void BrowserComponent::scriptMessageReceived (const juce::var messageBody)
     {
-        onMessageCallback (messageBody);
+        if(onMessageCallback != nullptr)
+            onMessageCallback (messageBody);
     }
-}// namespace BrowserIntegration
-}// namespace tomduncalf
+} // namespace BrowserIntegration
+} // namespace webui

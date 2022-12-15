@@ -5,7 +5,7 @@
  */
 #pragma once
 
-namespace tomduncalf
+namespace webui
 {
 namespace BrowserIntegration
 {
@@ -26,4 +26,4 @@ namespace BrowserIntegration
         void timerCallback() override;
     };
 }// namespace BrowserIntegration
-}// namespace tomduncalf
+}// namespace webui
